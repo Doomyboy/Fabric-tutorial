@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorial-mod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "Trying to learn how to fucking mod",
+	"authors": [
+		"Doomwolf"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-tutorial-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tutorial-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.doomwolf.tutorial.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.doomwolf.tutorial.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.doomwolf.tutorial.TutorialModClient"
+			]
+	},
+	"mixins": [
+		"tutorial-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
